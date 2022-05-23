@@ -1,10 +1,3 @@
-"""
-STACK - using list
-- push - append()
-- pop - pop()
-- peek - stack[-1]
-- len - len(stack)
-"""
 = = = = = = = = = = = = = = = = = = = = = = = = = 
 01. Reverse Numbers
 = = = = = = = = = = = = = = = = = = = = = = = = =
