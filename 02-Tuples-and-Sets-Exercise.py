@@ -7,10 +7,8 @@ names = set()
 for _ in range(n):
     name = input()
     names.add(name)
-
 [print(name) for name in names]
 
-    
 = = = = = = = = = = = = = = = = = = = = = = = = = 
 02. Sets of Elements
 = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -26,7 +24,6 @@ for _ in range(int(m)):
 
 set3 = set1.intersection(set2)
 [print(x) for x in set3]
-
 = = = = = = = = = = = = = = = = = = = = = = = = = 
 03. Periodic Table
 = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -37,7 +34,7 @@ for _ in range(n):
     line = input().split()
     for each in line:
         elements.add(each)
-        
+
 [print(element) for element in elements]
 
 = = = = = = = = = = = = = = = = = = = = = = = = = 
