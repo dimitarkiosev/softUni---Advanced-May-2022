@@ -87,7 +87,6 @@ while stack:
         rack = rack_size
         count += 1
         rack -= stack.pop()
-
 print(count)
 
 = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -229,6 +228,7 @@ while True:
 if not crashed:
     print(f'Everyone is safe.')
     print(f'{count} total cars passed the crossroads.')
+
 = = = = = = = = = = = = = = = = = = = = = = = = =
 09. Key Revolver
 = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -270,5 +270,3 @@ else:
 10. Cups and Bottles
 = = = = = = = = = = = = = = = = = = = = = = = = =
 
-
-= = = = = = = = = = = = = = = = = = = = = = = = =
