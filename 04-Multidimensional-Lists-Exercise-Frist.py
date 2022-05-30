@@ -97,14 +97,71 @@ for row in max_matrix:
 = = = = = = = = = = = = = = = = = = = = = = = = =
 05. Matrix of Palindromes
 = = = = = = = = = = = = = = = = = = = = = = = = = 
+letters = 'abcdefghijklmnopqrstuvxyz'
+n, m = [int(x) for x in input().split()]
+matrix = []
+
+for i in range(n):
+    ll = list()
+    for j in range(m)
+        element = letters[i] + letters[i+j] + letters[i]
+        ll.append(element)
+    matrix.append(ll)
+    
+print(matrix)
 
 = = = = = = = = = = = = = = = = = = = = = = = = =
 06. Matrix Shuffling
-= = = = = = = = = = = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = = = = = = = = = = =
+def is_outside(row, col, rows, cols):
+    return row < 0 or col < 0 or row >= rows or col >= cols
+
+n, m = [int(x) for x in input().split()]
+matrix = []
+
+for i in range(n):
+    ll = [int(x) for x in input().split()]
+    matrix.append(ll)
+
+while True:
+    line = input().split()
+    if line[0] == 'END':
+        break
+    elif len(line) != 5 or line[0] != 'swap':
+        print(f'Invalid input!')
+    elif line[0] == 'swap':
+        row_index = int(line[1])
+        col_index = int(line[2])
+        row_index_2 = int(line[3])
+        col_index_2 = int(line[4])
+        if is_outside(row_index, col_index, n, m) or is_outside(row_index_2, col_index_2, n, m):
+            print(f'Invalid input!')
+        else:
+            a = matrix[row_index][col_index]
+            matrix[row_index][col_index] = matrix[row_index_2][col_index_2]
+            matrix[row_index_2][col_index_2] = a
+            for row in matrix:
+                print(" ".join([str(x) for x in row]))
 
 = = = = = = = = = = = = = = = = = = = = = = = = =
 07. Snake Moves
 = = = = = = = = = = = = = = = = = = = = = = = = = 
+n, m = [int(x) for x in input().split()]
+word = input()
+matrix = []
+indx = 0
+
+for i in range(n):
+    ll = [None] * m
+    if i % 2 == 0:
+        for col in range(m):
+            ll[col] = word[indx % len(word)]
+            indx += 1
+    else:
+        for col in range(m):
+            ll[m - col - 1] = word[indx % len(word)]
+            indx += 1
+    print(''.join(ll))
 
 = = = = = = = = = = = = = = = = = = = = = = = = =
 08. Bombs
